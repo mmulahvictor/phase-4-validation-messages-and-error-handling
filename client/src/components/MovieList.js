@@ -15,9 +15,7 @@ function MovieList() {
       });
   }, []);
 
-  const categories = movies
-    .map((movie) => movie.category)
-    .filter(
+  const categories = movies.map((movie) => movie.category).filter(
       (category, index, categories) => categories.indexOf(category) === index
     )
     .sort();
